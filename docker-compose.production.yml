@@ -13,7 +13,7 @@ services:
     volumes:
       - pg_data_kitty_production:/var/lib/postgresql/data
   backend:
-    image: mihailovalexander/kittygram_backend
+    image: macbookprolera/kittygram_backend
     env_file: .env
     volumes:
       - static_kitty_production:/backend_static/
@@ -21,13 +21,13 @@ services:
     depends_on:
     - db
   frontend:
-    image: mihailovalexander/kittygram_frontend  # Качаем с DockerHub
+    image: macbookprolera/kittygram_frontend  # Качаем с DockerHub
     env_file: .env
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_kitty_production:/frontend_static
   gateway:
-    image: mihailovalexander/kittygram_gateway  # Качаем с DockerHub
+    image: macbookprolera/kittygram_gateway  # Качаем с DockerHub
     # env_file: .env
     volumes:
       - static_kitty_production:/staticfiles/
