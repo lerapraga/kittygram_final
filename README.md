@@ -139,4 +139,4 @@
  
 ### Автор 
  
-[GitHub]([Title] https://github.com/lerapraga)
+https://github.com/lerapraga
